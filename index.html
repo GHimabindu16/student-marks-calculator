@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Student Marks Calculator</h1>
+    <p>Calculate your marks, percentage and grade.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Enter Student Details</h2>
+
+      <form id="marksForm">
+        <label for="studentName">Student Name</label>
+        <input
+          type="text"
+          id="studentName"
+          placeholder="Enter student name"
+          maxlength="60"
+          required
+        >
+
+        <label for="maths">Mathematics (out of 100)</label>
+        <input type="number" id="maths"
+          min="0" max="100" step="1" required>
+
+        <label for="english">English (out of 100)</label>
+        <input type="number" id="english"
+          min="0" max="100" step="1" required>
+
+        <label for="science">Science (out of 100)</label>
+        <input type="number" id="science"
+          min="0" max="100" step="1" required>
+
+        <label for="computer">Computer (out of 100)</label>
+        <input type="number" id="computer"
+          min="0" max="100" step="1" required>
+
+        <label for="social">Social Studies (out of 100)</label>
+        <input type="number" id="social"
+          min="0" max="100" step="1" required>
+
+        <button type="submit">Calculate Result</button>
+      </form>
+    </section>
+
+    <section class="card result-card" id="result" hidden>
+      <h2>Student Result</h2>
+      <h3 id="resultName"></h3>
+
+      <div class="result-grid">
+        <div class="result-item">
+          <p>Total Marks</p>
+          <h3 id="total"></h3>
+        </div>
+
+        <div class="result-item">
+          <p>Percentage</p>
+          <h3 id="percentage"></h3>
+        </div>
+
+        <div class="result-item">
+          <p>Grade</p>
+          <h3 id="grade"></h3>
+        </div>
+
+        <div class="result-item">
+          <p>Result</p>
+          <h3 id="status"></h3>
+        </div>
+      </div>
+
+      <p id="message"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Student Marks Calculator | Mini Project - Day 3</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
